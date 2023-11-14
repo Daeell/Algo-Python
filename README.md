@@ -5,8 +5,8 @@ I LOVE PYTHON.
 ## 🙆‍♂️ 빠른 입력
 ```
 import sys
-n = int(sys.stdin.readline())
-# sys를 import하고 imput()이 들어갈 자리에 sys.stdin.readline()을 입력
+input = sys.stdin.readline
+# sys를 import하고 imput이 들어갈 자리에 sys.stdin.readline을 입력
 ```
 
 ## 🙆‍♂️ 1개 값 입력

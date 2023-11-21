@@ -1,14 +1,9 @@
-min_ = 101
-sum_ = 0
-for _ in range(7):
-    n = int(input())
-    if n % 2 == 1:
-        if min_ > n:
-            min_ = n
-        sum_ += n
+# 리스트 컴프리헨션 적용 풀이
+numbers = [int(input()) for _ in range(7)]
+odds = [num for num in numbers if num % 2 == 1]
 
-if min_ == 101:
-    print(-1)
+if odds:
+    print(sum(odds))
+    print(min(odds))
 else:
-    print(sum_)
-    print(min_)
+    print(-1)

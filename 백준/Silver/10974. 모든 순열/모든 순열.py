@@ -4,16 +4,19 @@ choose = []
 
 def permut(level):
 	if level == N:
-		for c in choose:
-			print(c, end=' ')
-		print()
+		print(' '.join(map(str, choose)))
 		return
-	for i in range(1, N+1):
-		if check[i] == False:
-			choose.append(i)
-			check[i] = True
-			permut(level+1)
-			choose.pop()
-			check[i] = False
+
+	for i in range(1, N + 1):
+		if check[i] == True:
+			continue
+
+		choose.append(i)
+		check[i] = True
+
+		permut(level + 1)
+
+		check[i] = False
+		choose.pop()
 
 permut(0)
